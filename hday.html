@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom classes for checkbox toggle effect */
+        input[type="checkbox"]:checked ~ .login {
+            transform: translateY(5px);
+        }
+        input[type="checkbox"]:checked ~ .login label {
+            transform: scale(1);
+        }
+        input[type="checkbox"]:checked ~ .signup label {
+            transform: scale(0.6);
+        }
+        .text-container{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+            color: #eee;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 60px;
+            padding-bottom: 70px;
+        }
+        .text-container #head{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+            padding-left: 15px;
+            display: flex;
+            flex-direction: column;
+            padding-top: 0;
+        }
+        .text-container p{
+            font-size: 15px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .mmm{
+            font-size: 16px;
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body class="m-0 p-0 flex justify-center items-center min-h-screen bg-gradient-to-b from-[#ffcc80] via-[#ffcc80] to-[#ffcc80] font-sans">
+    <div class="relative w-[350px] h-[500px] overflow-hidden rounded-[10px] shadow-[5px_20px_50px_#000]">
+        <input type="checkbox" id="chk" aria-hidden="true" class="hidden">
+
+        <!-- Signup (Craftsman Form) -->
+        <div class="signup absolute w-full h-full bg-gradient-to-b from-[#ffcc80] via-[#3e2723] to-[#ffcc80]">
+            <div class="back"></div>
+            <div class="front">
+                <div class="imgset">
+                    <img width="100%" src="https://1.bp.blogspot.com/-Mgj9-rbs65E/XfMoPSD5gtI/AAAAAAAAURk/NBokE2gSS2cTSJ2em5lZ5hJDuTtRN7UVwCLcBGAsYHQ/s1600/2713997.png" alt="Image description">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Login (Normal User Form) -->
+        <div class="login absolute w-full h-[460px] bg-[#3e2723] rounded-bl-[40%] rounded-br-[40%] translate-y-[-420px] transition-transform duration-[800ms] ease-in-out">
+            <form class="flex flex-col items-center justify-center h-full">
+                <div class="text-container">
+                    <p id="head">Happy Birthday MRS MURITALA</p>
+                    <p  class="mmm">We hope your special day will bring you lots of happiness, love, and fun. You deserve them a lot. Enjoy!</p>
+                    <p>Have a wonderful day!</p>
+                    <h5>Courtesy: THE CHILDREN</h5>
+                    <p>from us to you...</p>
+                </div>
+                <label for="chk" aria-hidden="true" class="mt-28 text-[#eee] text-[25px] font-bold transform scale-[0.6] transition-transform duration-[800ms] ease-in-out">Click Me</label>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
